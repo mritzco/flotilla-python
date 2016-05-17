@@ -19,5 +19,5 @@ class Motion(Module):
     @property
     def z(self):
         if len(self.data) > 2:
-            return int(self.data[2]) == 1
+            return int(self.data[2])
         return 0
