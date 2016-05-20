@@ -263,6 +263,9 @@ Try: kill {pid}""".format(pid=pid))
         self._debug("Command: {}".format(command))
 
         command = command.strip()
+        
+        if len(command) == 0:
+            return
 
         if command[0] == "#":
             if command[0:8] == "# Dock: ":
