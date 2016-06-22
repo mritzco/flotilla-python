@@ -1,5 +1,7 @@
 # Flotilla Python API
 
+The latest Flotilla Python API is now available in the master branch, please see: https://github.com/pimoroni/flotilla-python/tree/master
+
 This library interfaces with Flotilla over USB serial.
 
 ### How to use:  
