@@ -4,6 +4,7 @@ import serial
 import serial.tools.list_ports
 import atexit
 import time
+import sys
 from subprocess import check_output, CalledProcessError
 
 from .module import Module, NoModule
@@ -199,6 +200,9 @@ Try: kill {pid}""".format(pid=pid))
         '''
         user = user[0:8]
         self._serial_write("n u {}".format(user))
+
+    def request_version_info(self):
+        self._serial_write("v")
 
     def enumerate_devices(self):
         '''Request a list of connected devices from the dock
